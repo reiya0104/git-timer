@@ -20,3 +20,5 @@ github = { repository = "reiya0104/git-timer", workflow = "Rust" }
 maintenance = { status = "actively-developed" }
 
 [dependencies]
+anyhow = "1.0.58"
+thiserror = "1.0.31"
