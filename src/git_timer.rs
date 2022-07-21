@@ -11,8 +11,8 @@ pub(crate) fn git_timer(args: Vec<String>) {
     let command = &args[1];
 
     match Commands::from_str(command) {
-        Ok(Commands::START) => start(),
-        Ok(Commands::STOP) => stop(),
+        Ok(Commands::START) => start(args),
+        Ok(Commands::STOP) => stop(args),
         _ => println!("Invalid args"),
     }
 }
