@@ -7,4 +7,4 @@ git のコミットメッセージを使って時間経過を記録するプロ�
 
 ## LICSNSE
 
-MIT OR Apache-2.0
+MIT, Apache-2.0
