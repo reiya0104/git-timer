@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use crate::system::{commands::Commands, start::start, stop::stop};
+use crate::system::{command_name::CommandName, start::start, stop::stop};
 
 pub(crate) fn git_timer(args: Vec<String>) {
     if args.len() <= 1 {
@@ -10,9 +10,9 @@ pub(crate) fn git_timer(args: Vec<String>) {
 
     let command = &args[1];
 
-    match Commands::from_str(command) {
-        Ok(Commands::START) => start(args),
-        Ok(Commands::STOP) => stop(args),
+    match CommandName::from_str(command) {
+        Ok(CommandName::START) => start(args),
+        Ok(CommandName::STOP) => stop(args),
         _ => println!("Invalid args"),
     }
 }

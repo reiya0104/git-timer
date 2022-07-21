@@ -1,17 +1,17 @@
 use std::str::FromStr;
 
 #[derive(PartialEq, Debug)]
-pub enum Commands {
+pub enum CommandName {
     START,
     STOP,
 }
 
-impl FromStr for Commands {
+impl FromStr for CommandName {
     type Err = ();
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s {
-            "start" => Ok(Commands::START),
-            "stop" => Ok(Commands::STOP),
+            "start" => Ok(CommandName::START),
+            "stop" => Ok(CommandName::STOP),
             _ => Err(()),
         }
     }
