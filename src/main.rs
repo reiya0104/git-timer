@@ -1,3 +1,9 @@
+pub mod git_timer;
+pub mod system;
+
+use std::env;
+
 fn main() {
-    println!("Hello, world!");
+    let args: Vec<String> = env::args().collect();
+    git_timer::git_timer(args);
 }
