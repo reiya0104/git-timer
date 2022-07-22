@@ -15,7 +15,9 @@ impl FromStr for CommandName {
             "start" => Ok(CommandName::START),
             "stop" => Ok(CommandName::STOP),
             "--help" => Ok(CommandName::HELP),
+            "-h" => Ok(CommandName::HELP),
             "--version" => Ok(CommandName::VERSION),
+            "-v" => Ok(CommandName::VERSION),
             _ => Err(()),
         }
     }
