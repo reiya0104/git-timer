@@ -20,7 +20,7 @@ pub(crate) fn git_timer(args: Vec<String>) -> anyhow::Result<()> {
         Ok(CommandName::START) => Ok(start::start(args)),
         Ok(CommandName::STOP) => Ok(stop::stop(args)),
         Ok(CommandName::SHOW) => Ok(show::show(args)),
-        Ok(CommandName::HELP) => Ok(println!("help")),
+        Ok(CommandName::HELP) => Ok(help::help(args)),
         Ok(CommandName::VERSION) => Ok(version::version()),
         _ => Err(GitTimerError::InvalidCommandError {
             command: command.clone(),
