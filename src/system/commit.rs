@@ -3,8 +3,6 @@ use std::io::BufReader;
 use std::process::{Command, Stdio};
 
 pub(crate) fn commit(prefix: String, message: String) {
-    println!("{}{}", prefix, message);
-
     let mut child = Command::new("git")
         .args(&[
             "commit",
