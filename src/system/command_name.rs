@@ -4,6 +4,7 @@ use std::str::FromStr;
 pub enum CommandName {
     START,
     STOP,
+    SHOW,
     HELP,
     VERSION,
 }
@@ -14,6 +15,7 @@ impl FromStr for CommandName {
         match s {
             "start" => Ok(CommandName::START),
             "stop" => Ok(CommandName::STOP),
+            "show" => Ok(CommandName::SHOW),
             "--help" => Ok(CommandName::HELP),
             "-h" => Ok(CommandName::HELP),
             "--version" => Ok(CommandName::VERSION),
