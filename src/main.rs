@@ -1,3 +1,4 @@
+pub mod commands;
 pub mod error;
 pub mod git_timer;
 pub mod system;
