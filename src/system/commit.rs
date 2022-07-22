@@ -10,7 +10,7 @@ pub(crate) fn commit(prefix: String, message: String) {
             "commit",
             "--allow-empty",
             "-m",
-            format!("\"{}{}\"", prefix, message).as_str(),
+            format!("{}{}", prefix, message).as_str(),
         ])
         .stdout(Stdio::piped())
         .spawn()
